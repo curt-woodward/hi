@@ -14,7 +14,8 @@
             background: var(--surface);
             border-bottom: 1px solid var(--border);
             padding: 0 44px;
-            position: relative;
+            position: sticky;
+            top: 0;
         }
 
         .hero-content {
@@ -166,15 +167,5 @@
             </div>
         </div>
     </div>
-    <script>
-        window.addEventListener('scroll', () => {
-            const hero = document.getElementById('hero');
-            const scrolled = window.pageYOffset;
-            const heroHeight = hero.offsetHeight;
-            if (scrolled < heroHeight) {
-                hero.style.opacity = 1 - (scrolled / heroHeight) * 0.5;
-            }
-        });
-    </script>
 </body>
 </html>
