@@ -1,77 +1,73 @@
-<!-- project-first-mover.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Mover Advantage - Portfolio</title>
+    <title>First Mover Advantage — Curt Woodward</title>
+    <link rel="stylesheet" href="stone.css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #2a2a2a;
-            background: #e8eaed;
-        }
-
-        .nav {
-            background: #f5f6f7;
-            padding: 1.5rem 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .nav a {
-            color: #4a5d73;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav a:hover {
-            color: #2a2a2a;
-        }
-
         .container {
-            max-width: 900px;
+            max-width: 780px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 48px 44px 80px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #2a2a2a;
-            line-height: 1.2;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.25;
         }
 
         .meta {
-            color: #4a5568;
-            margin-bottom: 2rem;
-            font-size: 1rem;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-faint);
+            margin-bottom: 32px;
         }
 
-        .project-role {
-            background: #f5f6f7;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border-left: 4px solid #7a8a9e;
+        .role-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--green);
+            border-radius: 0 var(--r-lg) var(--r-lg) 0;
+            padding: 22px 24px;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow-sm);
         }
 
-        .project-role h2 {
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-            color: #2a2a2a;
+        .role-card h2 {
+            font-size: 13px;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--green);
+            margin-bottom: 10px;
         }
 
-        .project-role p {
-            color: #4a5568;
+        .role-card p {
+            font-size: 13px;
+            line-height: 1.75;
+            color: var(--text-muted);
+        }
+
+        .content-section {
+            margin-bottom: 32px;
+        }
+
+        .content-section h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .content-section p {
+            font-size: 14px;
             line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 10px;
         }
 
         .video-container {
@@ -79,9 +75,10 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            margin: 2rem 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 32px 0;
+            border-radius: var(--r-lg);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
         }
 
         .video-container iframe {
@@ -92,79 +89,66 @@
             height: 100%;
         }
 
-        .content-section {
-            margin: 2rem 0;
+        .links-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 22px 24px;
+            box-shadow: var(--shadow-sm);
         }
 
-        .content-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2a2a2a;
+        .links-card h3 {
+            font-size: 10px;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-faint);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 16px;
         }
 
-        .content-section p {
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .links {
-            background: #f5f6f7;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
-
-        .links h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #2a2a2a;
-        }
-
-        .links ul {
+        .links-card ul {
             list-style: none;
         }
 
-        .links li {
-            margin-bottom: 0.75rem;
+        .links-card li {
+            margin-bottom: 10px;
         }
 
-        .links a {
-            color: #4a5d73;
+        .links-card a {
+            font-size: 13px;
+            color: var(--green);
             text-decoration: none;
-            transition: color 0.3s ease;
-            border-bottom: 1px solid #7a8a9e;
-            padding-bottom: 2px;
+            border-bottom: 1px solid var(--green-border);
+            padding-bottom: 1px;
+            transition: border-color 0.15s ease;
         }
 
-        .links a:hover {
-            color: #2a2a2a;
-            border-bottom-color: #2a2a2a;
+        .links-card a:hover {
+            border-bottom-color: var(--green);
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 2rem 1.5rem;
-            }
+            .container { padding: 32px 20px 60px; }
+            h1 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="site-nav">
         <a href="index.html">← Back to Portfolio</a>
     </nav>
 
     <div class="container">
+        <p class="eyebrow" style="margin-bottom:12px;">Content Strategy</p>
         <h1>How we turned a boring spreadsheet into a compelling story about new business growth</h1>
-        
-        <div class="meta">
-            Content Strategy • Video Production • Multi-Channel Campaign
-        </div>
 
-        <div class="project-role">
+        <div class="meta">Video Production · Multi-Channel Campaign</div>
+
+        <div class="role-card">
             <h2>My Role</h2>
             <p>Scoped, storyboarded, wrote the script for, directed, and edited the video. Wrote, edited, and vetted the blog post. Created the social post copy, along with a copy package for the webinar, promotional emails, newsletters, and additional social posts.</p>
         </div>
@@ -175,11 +159,11 @@
         </div>
 
         <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/KRC6BM6hVno" 
+            <iframe
+                src="https://www.youtube.com/embed/KRC6BM6hVno"
                 title="First Mover Advantage Video"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
         </div>
@@ -195,7 +179,9 @@
             <p>The multi-channel approach transformed technical product data into an engaging story about sales success, making complex pipeline analytics accessible and actionable for the target audience.</p>
         </div>
 
-        <div class="links">
+        <hr>
+
+        <div class="links-card">
             <h3>Project Links</h3>
             <ul>
                 <li><a href="https://pipeline.zoominfo.com/sales/first-mover-advantage-data" target="_blank">Read the full blog post →</a></li>
