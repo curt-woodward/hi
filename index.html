@@ -4,77 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curt Woodward | Content That Pays</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stone.css" />
     <style>
-        :root {
-            --bg:         #F5F2EE;
-            --surface:    #FDFCFB;
-            --surface-2:  #EEE9E3;
-            --surface-3:  #E0D9D0;
-            --border:     #D8D2C8;
-            --border-2:   #C8C0B4;
-            --text:       #2C2825;
-            --text-muted: #8C8278;
-            --text-faint: #B0A898;
-            --green:         #2A6B52;
-            --green-bg:      rgba(42, 107, 82, 0.07);
-            --green-border:  rgba(42, 107, 82, 0.22);
-            --terracotta:        #C4703A;
-            --terracotta-bg:     rgba(196, 112, 58, 0.07);
-            --terracotta-border: rgba(196, 112, 58, 0.22);
-            --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
-            --font-sans:  'DM Sans', system-ui, -apple-system, sans-serif;
-            --r-sm: 4px;
-            --r:    6px;
-            --r-lg: 8px;
-            --shadow-sm: 0 1px 3px rgba(44, 40, 37, 0.05);
-            --shadow:    0 1px 6px rgba(44, 40, 37, 0.07);
-            --shadow-md: 0 2px 14px rgba(44, 40, 37, 0.10);
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: var(--font-sans);
-            font-size: 14px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3 {
-            font-family: var(--font-serif);
-            color: var(--text);
-            line-height: 1.2;
-            letter-spacing: -0.2px;
-        }
-
         /* ── Hero ── */
         .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
             background: var(--surface);
             border-bottom: 1px solid var(--border);
-            padding: 80px 44px 72px;
+            padding: 0 44px;
+            position: relative;
         }
 
         .hero-content {
             max-width: 680px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .eyebrow {
-            font-family: var(--font-sans);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--green);
             margin-bottom: 16px;
         }
 
@@ -95,23 +44,14 @@
         .projects-wrapper {
             background: var(--bg);
             padding: 60px 44px;
+            position: relative;
+            margin-top: -50px;
+            z-index: 10;
         }
 
         .projects {
             max-width: 1100px;
             margin: 0 auto;
-        }
-
-        .section-label {
-            font-family: var(--font-sans);
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--text-faint);
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
-            margin-bottom: 32px;
         }
 
         .project-grid {
@@ -176,28 +116,8 @@
             margin-bottom: 16px;
         }
 
-        .project-tag {
-            display: inline-block;
-            font-size: 9px;
-            padding: 3px 8px;
-            border-radius: var(--r-sm);
-            font-family: var(--font-sans);
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            background: var(--green-bg);
-            color: var(--green);
-            border: 1px solid var(--green-border);
-        }
-
-        .project-tag--muted {
-            background: var(--surface-2);
-            color: var(--text-faint);
-            border-color: var(--border);
-        }
-
         @media (max-width: 768px) {
-            .hero          { padding: 48px 20px 40px; }
+            .hero          { padding: 0 20px; }
             .hero h1       { font-size: 2rem; }
             .projects-wrapper { padding: 40px 20px; }
             .project-grid  { grid-template-columns: 1fr; }
@@ -205,7 +125,7 @@
     </style>
 </head>
 <body>
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <p class="eyebrow">Content That Pays</p>
             <h1>Hi! I'm Curt Woodward</h1>
@@ -222,7 +142,7 @@
                     <div class="project-content">
                         <h3>How we turned a boring spreadsheet into a compelling story about new business growth</h3>
                         <p>A complete content campaign transforming complex pipeline data into an engaging multi-channel story—from video production to social strategy.</p>
-                        <span class="project-tag">Content Strategy</span>
+                        <span class="tag">Content Strategy</span>
                     </div>
                 </a>
 
@@ -231,7 +151,7 @@
                     <div class="project-content">
                         <h3>Coming Soon</h3>
                         <p>More projects and writing coming soon.</p>
-                        <span class="project-tag project-tag--muted">Writing</span>
+                        <span class="tag tag--muted">Writing</span>
                     </div>
                 </div>
 
@@ -240,11 +160,21 @@
                     <div class="project-content">
                         <h3>Coming Soon</h3>
                         <p>More projects and writing coming soon.</p>
-                        <span class="project-tag project-tag--muted">Video Production</span>
+                        <span class="tag tag--muted">Video Production</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        window.addEventListener('scroll', () => {
+            const hero = document.getElementById('hero');
+            const scrolled = window.pageYOffset;
+            const heroHeight = hero.offsetHeight;
+            if (scrolled < heroHeight) {
+                hero.style.opacity = 1 - (scrolled / heroHeight) * 0.5;
+            }
+        });
+    </script>
 </body>
 </html>

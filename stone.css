@@ -1,0 +1,166 @@
+/* ═══════════════════════════════════════════════
+   STONE DESIGN SYSTEM — shared stylesheet
+   ═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+:root {
+    --bg:         #F5F2EE;
+    --surface:    #FDFCFB;
+    --surface-2:  #EEE9E3;
+    --surface-3:  #E0D9D0;
+    --border:     #D8D2C8;
+    --border-2:   #C8C0B4;
+    --text:       #2C2825;
+    --text-muted: #8C8278;
+    --text-faint: #B0A898;
+    --green:         #2A6B52;
+    --green-bg:      rgba(42, 107, 82, 0.07);
+    --green-border:  rgba(42, 107, 82, 0.22);
+    --terracotta:        #C4703A;
+    --terracotta-bg:     rgba(196, 112, 58, 0.07);
+    --terracotta-border: rgba(196, 112, 58, 0.22);
+    --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+    --font-sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+    --r-sm: 4px;
+    --r:    6px;
+    --r-lg: 8px;
+    --shadow-sm: 0 1px 3px rgba(44, 40, 37, 0.05);
+    --shadow:    0 1px 6px rgba(44, 40, 37, 0.07);
+    --shadow-md: 0 2px 14px rgba(44, 40, 37, 0.10);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    color: var(--text);
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+
+p {
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.eyebrow {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+.section-label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 32px;
+}
+
+/* ── Nav bar ── */
+.site-nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 44px;
+}
+
+.site-nav a {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.site-nav a:hover {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* ── Card ── */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 26px;
+    box-shadow: var(--shadow);
+}
+
+.card--accent-top   { border-top: 3px solid var(--green); }
+.card--accent-terra { border-top: 3px solid var(--terracotta); }
+
+/* ── Callout ── */
+.callout {
+    border-left: 3px solid var(--green);
+    padding: 12px 16px;
+    border-radius: 0 var(--r) var(--r) 0;
+    background: var(--green-bg);
+}
+
+.callout--terracotta {
+    border-left-color: var(--terracotta);
+    background: var(--terracotta-bg);
+}
+
+/* ── Tags ── */
+.tag {
+    display: inline-block;
+    font-size: 9px;
+    padding: 3px 8px;
+    border-radius: var(--r-sm);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--green-bg);
+    color: var(--green);
+    border: 1px solid var(--green-border);
+}
+
+.tag--muted {
+    background: var(--surface-2);
+    color: var(--text-faint);
+    border-color: var(--border);
+}
+
+/* ── Divider ── */
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 32px 0;
+}
+
+@media (max-width: 768px) {
+    .site-nav { padding: 14px 20px; }
+}
