@@ -11,24 +11,12 @@
             height: 100vh;
             background: var(--surface);
             border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            overflow: hidden;
-        }
-
-        /* orbit stage fills the hero and centers content */
-        .orbit-stage {
-            position: relative;
-            width: 100%;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
             text-align: center;
         }
 
@@ -52,42 +40,10 @@
             margin: 0 auto;
         }
 
-        /* ── Orbit items ── */
-        .orbit-item {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 96px;
-            height: 72px;
-            border-radius: var(--r-lg);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-md);
-            overflow: hidden;
-            will-change: transform;
-            background: var(--surface-2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            color: var(--text-faint);
-            /* translate applied by JS; seed each item at its ellipse position */
-            transform: translate(-50%, -50%);
-        }
-
-        .orbit-item:nth-child(1) { background: var(--surface-2); }
-        .orbit-item:nth-child(2) { background: var(--green-bg); border-color: var(--green-border); }
-        .orbit-item:nth-child(3) { background: var(--terracotta-bg); border-color: var(--terracotta-border); }
-        .orbit-item:nth-child(4) { background: var(--surface-3); }
-        .orbit-item:nth-child(5) { background: var(--green-bg); border-color: var(--green-border); }
-        .orbit-item:nth-child(6) { background: var(--terracotta-bg); border-color: var(--terracotta-border); }
-
         /* ── Projects section ── */
         .projects-wrapper {
             background: var(--bg);
             padding: 60px 44px;
-            position: relative;
-            margin-top: -50px;
-            z-index: 10;
         }
 
         .projects {
@@ -159,7 +115,6 @@
 
         @media (max-width: 768px) {
             .hero h1       { font-size: 2.2rem; }
-            .orbit-item    { width: 70px; height: 52px; font-size: 1.2rem; }
             .projects-wrapper { padding: 40px 20px; }
             .project-grid  { grid-template-columns: 1fr; }
         }
@@ -167,18 +122,10 @@
 </head>
 <body>
     <section class="hero" id="hero">
-        <div class="orbit-stage" id="orbit-stage">
-            <div class="orbit-item">📊</div>
-            <div class="orbit-item">✍️</div>
-            <div class="orbit-item">🎬</div>
-            <div class="orbit-item">📰</div>
-            <div class="orbit-item">🎙️</div>
-            <div class="orbit-item">📱</div>
-            <div class="hero-content">
-                <p class="eyebrow">Content That Pays</p>
-                <h1>Curt Woodward</h1>
-                <p>How does content drive real, tangible value? Answering this question is the core of my work, from marketing to journalism and beyond.</p>
-            </div>
+        <div class="hero-content">
+            <p class="eyebrow">Content That Pays</p>
+            <h1>Curt Woodward</h1>
+            <p>How does content drive real, tangible value? Answering this question is the core of my work, from marketing to journalism and beyond.</p>
         </div>
     </section>
 
@@ -215,42 +162,5 @@
             </div>
         </div>
     </div>
-    <script>
-        (function () {
-            var items = document.querySelectorAll('.orbit-item');
-            var n = items.length;
-            var lastScroll = 0;
-            var ticking = false;
-
-            function getRx() { return window.innerWidth < 768 ? 130 : 340; }
-            function getRy() { return window.innerWidth < 768 ?  65 : 150; }
-
-            function updateOrbit(scrollY) {
-                var angleDeg = scrollY * 0.14;
-                var rx = getRx();
-                var ry = getRy();
-                for (var i = 0; i < n; i++) {
-                    var theta = (angleDeg + (360 / n) * i) * (Math.PI / 180);
-                    var x = rx * Math.cos(theta);
-                    var y = ry * Math.sin(theta);
-                    items[i].style.transform =
-                        'translate(calc(-50% + ' + x + 'px), calc(-50% + ' + y + 'px))';
-                }
-            }
-
-            window.addEventListener('scroll', function () {
-                lastScroll = window.scrollY;
-                if (!ticking) {
-                    requestAnimationFrame(function () {
-                        updateOrbit(lastScroll);
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            }, { passive: true });
-
-            updateOrbit(0);
-        })();
-    </script>
 </body>
 </html>
