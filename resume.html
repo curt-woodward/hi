@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume — Curt Woodward</title>
+    <link rel="stylesheet" href="stone.css" />
+    <style>
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 48px 44px 80px;
+        }
+
+        .resume-header {
+            margin-bottom: 40px;
+        }
+
+        .resume-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .resume-header .contact {
+            font-size: 13px;
+            color: var(--text-faint);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .resume-header .contact a {
+            color: var(--green);
+        }
+
+        .summary {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 10px;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-faint);
+            margin-bottom: 20px;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .skills-list li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--text-faint);
+        }
+
+        .job {
+            margin-bottom: 32px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .job-dates {
+            font-size: 11px;
+            font-family: var(--font-sans);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-faint);
+        }
+
+        .job-desc {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .job ul {
+            padding-left: 18px;
+            margin-top: 8px;
+        }
+
+        .job ul li {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .edu-item .degree {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .edu-item .location {
+            font-size: 11px;
+            font-family: var(--font-sans);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-faint);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 32px 20px 60px; }
+            .resume-header h1 { font-size: 1.6rem; }
+            .job-header { flex-direction: column; gap: 2px; }
+            .edu-item { flex-direction: column; gap: 2px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="index.html">← Back to Portfolio</a>
+    </nav>
+
+    <div class="container">
+        <div class="resume-header">
+            <p class="eyebrow" style="margin-bottom:10px;">Resume</p>
+            <h1>Curt Woodward</h1>
+            <p style="font-size:14px;color:var(--text-muted);margin-top:4px;">Content Marketing Leader &amp; Strategist</p>
+            <div class="contact">
+                <a href="mailto:curtwoodward@gmail.com">curtwoodward@gmail.com</a>
+                <a href="https://linkedin.com/in/curtwoodward/" target="_blank">linkedin.com/in/curtwoodward</a>
+                <span>253-444-8194</span>
+            </div>
+        </div>
+
+        <p class="summary">Content creator, team-builder, analyst and AI content strategist for major brands in tech and media. Obsessed with leveraging high-quality, audience-focused experiences for tangible business and brand results. Leader in driving AI use, best practices, and tool evaluation for a $1B revenue company. Trusted in people &amp; project management, editorial judgment and standards, data analysis, C-suite communications, public relations and social media. Previously seen on Page One: career foundation in news media as a reporter, editor, event host and analyst.</p>
+
+        <div class="section">
+            <p class="section-title">Skills</p>
+            <ul class="skills-list">
+                <li><strong>Full-stack marketing content:</strong> Planning, execution, editorial oversight and distribution, across all formats and channels, from brainstorm to campaign launch and reporting.</li>
+                <li><strong>Leadership:</strong> Change management, team building, digital transformation, KPI definition and tracking, internal communications, stakeholder management, cross-functional collaboration and campaign management.</li>
+                <li><strong>Tools &amp; systems:</strong> WordPress and other CMS platforms, ChatGPT, Jasper.ai, Tableau, Salesforce, Jira, Airtable, BrightEdge and other SEO platforms, and Google Workspace including Search Console, Apps Scripts, Looker and Analytics.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <p class="section-title">Experience</p>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">ZoomInfo &mdash; Director, Editorial Content</span>
+                    <span class="job-dates">2021 – Present</span>
+                </div>
+                <p class="job-desc">Leading content marketing for ZoomInfo (NASDAQ: GTM), rebuilding how a B2B marketing team creates, scales, and distributes content, with AI at the center. Thriving at the intersection of editorial strategy, AI systems, and revenue generation.</p>
+                <ul>
+                    <li>Deployed AI agents across the business for brand &amp; CEO voice, demand gen copywriting, video/webinar repurposing, and deep analysis of sales call records</li>
+                    <li>Drove millions in qualified pipeline annually through high-value content, building company's first content value scoring system to identify most valuable themes and assets</li>
+                    <li>Tested, onboarded, and scaled high-volume AI content production: 20x content output, doubled search impressions in one quarter</li>
+                    <li>Rebuilt and retrained team to emphasize editorial systems that blend AI tooling with high-value judgment</li>
+                    <li>Co-launched a thought leadership video series designed for AI search visibility across key content pillars</li>
+                    <li>Established ZoomInfo's first brand copywriting desk, growing from one writer to a four-person team</li>
+                    <li>Developed the company's first quarterly content planning process, aligned to five customer personas</li>
+                    <li>Led re-launch of the ZoomInfo blog, including CMS migration, new tentpole content, and persona-based sections</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">The Boston Globe</span>
+                    <span class="job-dates">2015 – 2021</span>
+                </div>
+                <p class="job-desc">Created role of embedded newsroom analyst, bridging journalists and marketing teams to connect news content output with business success. Built and managed custom KPI dashboards for newsroom staff of 120. Led training and research for newsroom leadership and frontline staff.</p>
+                <p class="job-desc">Managed and led community administration and public response for Globe on social platforms, including Facebook and Twitter, working with the award-winning Spotlight team.</p>
+                <p class="job-desc">Previously: Lead tech reporter for the business section, covering high-profile state and federal investigations of major companies including HubSpot and DraftKings. Editor and staff writer for in-house news startup BetaBoston, covering the region's tech and venture sectors.</p>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">Xconomy &mdash; Reporter &amp; Conference Host</span>
+                    <span class="job-dates">2011 – 2015</span>
+                </div>
+                <p class="job-desc">Covered technology startups and venture capital for an online news startup across Seattle and Boston. Conceived, planned, and hosted multiple revenue-driving conferences. Featured panel speaker and pitch contest judge.</p>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-title">The Associated Press</span>
+                    <span class="job-dates">2002 – 2011</span>
+                </div>
+                <p class="job-desc">Wide-ranging journalism experience for the world's largest news organization across Helena MT, Bismarck ND, Seattle, and Olympia WA — including breaking news editing, news desk supervision, state government and elections coverage, and business reporting on major publicly traded companies.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <p class="section-title">Education</p>
+            <div class="edu-item">
+                <span class="degree">Western Washington University &mdash; B.A., Journalism</span>
+                <span class="location">Bellingham, WA</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
