@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Survey — Curt Woodward</title>
+    <link rel="stylesheet" href="stone.css" />
+    <style>
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 56px 44px 80px;
+        }
+
+        .survey-header {
+            margin-bottom: 40px;
+        }
+
+        .survey-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 12px 0 16px;
+        }
+
+        .survey-header p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            max-width: 520px;
+        }
+
+        .question-preview {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 24px 28px;
+            margin-bottom: 32px;
+        }
+
+        .question-preview h3 {
+            font-family: var(--font-sans);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-faint);
+            margin-bottom: 16px;
+        }
+
+        .question-preview ol {
+            padding-left: 20px;
+        }
+
+        .question-preview li {
+            font-size: 14px;
+            line-height: 1.9;
+            color: var(--text-muted);
+        }
+
+        .form-embed-wrapper {
+            border-radius: var(--r-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .form-embed-wrapper iframe {
+            display: block;
+            width: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 32px 20px 60px; }
+            .survey-header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="index.html">← Curt Woodward</a>
+    </nav>
+
+    <div class="container">
+        <div class="survey-header">
+            <p class="eyebrow">Quick Survey</p>
+            <h1>Tell Me About Newsletters</h1>
+            <p>I'm researching the newsletter space — as products, as business models, and as reader experiences. Four quick questions, no wrong answers. Takes two minutes.</p>
+        </div>
+
+        <div class="question-preview">
+            <h3>Four Questions</h3>
+            <ol>
+                <li>How many newsletters do you subscribe to? (0–3, 4–6, 7+)</li>
+                <li>Which newsletters really break through for you, and why?</li>
+                <li>If you were taking over a newsletter portfolio today, the first thing you'd do is ______.</li>
+                <li>One important thing everyone gets wrong about newsletters is ______.</li>
+            </ol>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             PASTE YOUR GOOGLE FORM EMBED CODE BELOW.
+             In Google Forms: Send → Embed (<>) → Copy HTML
+             Replace the placeholder iframe with that code.
+             Set the height to ~900 (adjust to taste).
+             ═══════════════════════════════════════════════════════════════ -->
+        <div class="form-embed-wrapper">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSded19i81bdzt4ItrrBMtj8JRo0X9QnwWYz6j_6rDq1JOEU3Q/viewform?embedded=true"
+                width="100%"
+                height="900"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                title="Newsletter Survey">
+                Loading survey…
+            </iframe>
+        </div>
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    </div>
+</body>
+</html>
